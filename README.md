@@ -2,7 +2,7 @@
 Tools to analyse and extract genomic data.
 
 ## 1. assembly_stats.pl :
-Perl script to get assembly/ fasta info.
+Perl and R script to get assembly/ fasta info. The R script is embedded in the Perl code and is used for plotting the histogram of contig lengths.
 ##### Syntax : ./assembly_stats.pl your_assembly.fasta min_contig_length_to_consider
 ##### Output : 
 L10-L90, N10-N90, histogram of contig/ scaffold lengths(need an installation of R), number of contigs, assembly size, longest contig length, mean contig length, total number of N's, average number of N's per contig, IUPAC bases other than ATGC(%), GC content(%).
