@@ -20,3 +20,25 @@ Python script to get complement, reverse or reverse complement of sequences in a
 (-c : 0 for reverse; 1 for complement; 2 for reverse complement)
 ##### Output : 
 Fasta file with desired operation performed on all the sequences in the file.
+
+##  4. variant_calling_pipeline.sh
+Shell script for complete variant calling process. This script requires path to GATK (jar file), PICARD (jar file) and a global installation of BWA (http://bio-bwa.sourceforge.net/). It will ask for an input of the names of the paired-end read files (fastq) and the genome file (fasta).
+The following steps will be carried out : 
+  1. Genome indexing
+  2. Quality control and trimming of reads
+  3. Alignment of reads against the genome
+  4. Sorting SAM file by coordinate and conversion to BAM
+  5. Getting sequence depth
+  6. Building index for BAM file
+  7. Creating realignment targets
+  8. Realigning indels
+  9. Variant calling
+  10. Extracting SNPs and INDELS
+  11. Filtering SNPs and INDELS
+  12. Base Quality Score Recalibration (BQSR)
+  13. Calling final variants
+  14. Extracting final SNPs and INDELS
+  15. Final filtering of SNPs and INDELS
+ 
+ #### Syntax : bash variant_calling_pipeline.sh
+ #### Output : VCF files containing SNPs and INDELS present in sample w.r.t. the genome.
