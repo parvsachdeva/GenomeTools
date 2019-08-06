@@ -41,4 +41,23 @@ The following steps will be carried out :
   15. Final filtering of SNPs and INDELS
  
  #### Syntax : bash variant_calling_pipeline.sh
- #### Output : VCF files containing SNPs and INDELS present in sample w.r.t. the genome.
+ #### Output : 
+VCF files containing SNPs and INDELS present in sample w.r.t. the genome.
+
+## 5. syn_gen.pl
+Perl script to create a synthetic genome/ chromosome using a random number generator.
+The program will ask for the number of bases required and a file name to write the output to. Only ATGC bases are printed in the file in random.
+#### Syntax : ./syn_gen.py
+#### Output : 
+A fasta file with a header consisting of a randomly generated genome.
+
+## 6. shortest_common_superstring.pl
+Perl script that can :
+  1. Find all possible k-mers in a given sequence
+  2. Find all unique k-mers
+  3. Find the shortest common superstring using the unique k-mers
+ The program will ask for a string and the size of k-mers to compute the above.
+ #### Syntax : ./shortest_common_superstring.pl
+ #### Output : 
+ Unique k-mers, Shortest Common Superstring
+ 
